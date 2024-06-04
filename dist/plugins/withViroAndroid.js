@@ -39,7 +39,7 @@ const withBranchAndroid = (config) => {
                 }
                 const viroPlugin = config?.plugins?.find((plugin) => Array.isArray(plugin) && plugin[0] === "@viro-community/react-viro");
                 if (Array.isArray(viroPlugin)) {
-                    if (Array.isArray(viroPlugin[1].android?.xRMode)) {
+                    if (Array.isArray(viroPlugin[1]?.android?.xRMode)) {
                         viroPluginConfig = (viroPlugin[1].android?.xRMode).filter((mode) => ["AR", "GVR", "OVR_MOBILE"].includes(mode));
                     }
                     else if (["AR", "GVR", "OVR_MOBILE"].includes(viroPlugin[1]?.android?.xRMode)) {
